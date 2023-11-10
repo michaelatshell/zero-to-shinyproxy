@@ -5,7 +5,7 @@ metadata:
     {{- include "shinyproxy.labels" . | nindent 4 }}
   name: {{ include "shinyproxy.resourcename" . }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.proxy.replicaCount | int }}
   selector:
     matchLabels:
       {{- include "shinyproxy.selectorLabels" . | nindent 6 }}

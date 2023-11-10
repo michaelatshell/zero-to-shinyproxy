@@ -38,6 +38,8 @@ proxy:
   image:
     name: remche/shinyproxy
     tag: 2.6.1
+  # proxy.replicaCount -- ShinyProxy deployment replicas
+  replicaCount: 1
   # proxy.labels -- ShinyProxy deployment labels
   labels: {}
   # proxy.annotations -- ShinyProxy deployment annotations
